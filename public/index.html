@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="MyTravels">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/custom.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+       <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.min.js"></script> -->
+    <script src="./angularjs-app/app.js"></script>
+    <script src="./angularjs-app/travel-one/travel-one-controller.js"></script>
+    <script src="./angularjs-app/travelFactory/travelFactory.js"></script>
+    <script src="./angularjs-app/main/main-controller.js"></script>
+
+    <script src="./angularjs-app/travels-list/travel-list-controller.js"></script>
+
+</head>
+
+<body>
+    <div id ="container" ng-view></div>
+
+    <footer class="footer">
+        <div class="container">
+        <p class="text-muted text-center">
+            <a
+                href="https://compro.miu.edu"
+                target="_blank">
+                <img
+                src="images/logo.webp"
+                height="60" alt="MIU
+                Compro"></a>
+            <br/>
+            <small class="text-black-50 text-center">
+                &copy; 2021 Maharishi International
+                University. All Rights Reserved.
+            </small>
+        </p>
+        </div>
+  
+    </footer>
+</body>
+
+</html>

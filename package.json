@@ -1,0 +1,31 @@
+{
+  "name": "php",
+  "version": "1.0.0",
+  "description": "Personal Hobby Project",
+  "main": "app.js",
+  "scripts": {
+    "startBackend":"node app.js",
+    "startFrontend": "cd ./public/angular-app/ && npm start",
+     "start": "npm-run-all --parallel startBackend startFrontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lulit25/Personal_Hobby_Project.git"
+  },
+  "author": "Lulit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lulit25/Personal_Hobby_Project/issues"
+  },
+  "homepage": "https://github.com/Lulit25/Personal_Hobby_Project#readme",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.8"
+  }
+}

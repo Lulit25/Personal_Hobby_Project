@@ -1,0 +1,40 @@
+<div>
+    <form class="d-flex">
+        <input class=" col-sm-3 me-sm-2" type="text" placeholder="Search" ng-model="SearchText"
+            style="float: right; margin-left: 70%;">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+<h1 style="color:goldenrod; font-family: Georgia, 'Times New Roman', Times, serif;">List of Travels</h1>
+<ul>
+    <li ng-repeat="travel in vm.travels | filter : SearchText" style="list-style-type: none;">
+        <div class="card border-primary mb-3" style="max-width: 60rem;">
+            <div class="card-header">Travel Destination</div>
+            <div class="card-body">
+              <h4 class="card-title"><a style="text-decoration: none; color:rgb(214, 195, 146)"
+                ng-href="#!/travels/{{travel._id}}"> {{travel.destination}} </a></h4>
+              <p class="card-text">Explore the amazing {{travel.destination}} with just {{travel.averageTicketPrice| currency}}  </p>
+              <button type="button" class="btn btn-secondary  col-sm-1"
+              ng-click=vm.deleteTravel(travel._id)>Delete</button>
+            </div>
+          </div>
+    </li>
+</ul>
+<form name="vm.myform" ng-submit="vm.addTravel()">
+    <h2 style="color:goldenrod; font-family: Georgia, 'Times New Roman', Times, serif;">Add New Travel</h2>
+
+    <label for="Destination" class="col-sm-1" class="form-label">Destination: </label>
+    <input class="col-sm-3" type="text" , name="destination" , ng-model="vm.destination" required
+        style="color:black" /><br><br>
+    <label for="Ticket Price" class="col-sm-1" class="form-label"> Ticket Price:</label>
+    <input class="col-sm-3" type="text" , name="averageTicketPrice" ng-model="vm.averageTicketPrice" required
+        style="color:black" /><br><br>
+    <label for="Distance" class="col-sm-1" class="form-label">Distance: </label>
+    <input class="col-sm-3" type="text" , name="distance" ng-model="vm.distance" style="color:black" /><br><br>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form> 
+
+<label for="message" class="col-sm-1"> {{vm.message}}</label>
+<br>
+<a ng-href="#!/" style=" color:rgb(212, 181, 100); font-size:medium;">Go back to Home Page</a><br>
